@@ -10,6 +10,7 @@ The programs in this package were written to process data for small angle x-ray 
 
 #### calculate_scattering_from_pdb/calc_scat_from_previous_calc.py (python2)
 
+```
 This python program started of as a python version of a Steen Hanson MCsimul program (written in FORTRAN) 
 that was download from http://www.matfys.kvl.dk/~steen/MCsimul.zip May 2012. 
 It was changed to read input in the PDB file format. 
@@ -25,14 +26,17 @@ but can conveniently be used by pdb programs to view the scattering points as if
 The pdb format does not have a field for contrast (or scattering length density). 
 This field will be read from columns 81-88. If the field is not filled in the input pdb file, 
 then it will be defaulted to the value of 1 for that scattering point. 
+```
 
 #### calculate_scattering_from_pdb/calc_scat_with_without_params.py (python2)
 
+```
 This program reads in the scattering curves for each scattering component and cross-term between scattering components, 
 and reads in the contrasts and volumes, calculates the new scattering. 
 A previous program calculated the scattering curves, and it may have taken a while for that to be calculated. 
 This program allows the contrast to be varied and scattering to be recalculated with the varied contrast 
 without having to rerun the timeconsuming calculating for component scattering. 
+```
 
 ## Citation
 
