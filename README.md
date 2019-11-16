@@ -12,12 +12,6 @@ The programs in this package were written to process data for small angle x-ray 
 
 #### calculate_scattering_from_pdb/calc_scat_with_without_params.py (python2)
 
-This python program started of as a python version of a Steen Hanson MCsimul program (written in FORTRAN)
-that was download from http://www.matfys.kvl.dk/~steen/MCsimul.zip May 2012.
-It was changed to read input in the PDB file format.
-It was extended to process multiple densities according to Whitten and Trewhella 2008.
-The Guinier processing in this python program has not yet been tested to ensure that it is still correct after the extensions made to the python program
-
 This program reads in a file in pdb format, containing points that represent scattering points.
 For x-ray scattering, the points represent electrons.
 This program reads the co-ordinates of the points,
@@ -27,6 +21,12 @@ but can conveniently be used by pdb programs to view the scattering points as if
 The pdb format does not have a field for contrast (or scattering length density).
 This field will be read from columns 81-88. If the field is not filled in the input pdb file,
 then it will be defaulted to the value of 1 for that scattering point.
+
+This python program started of as a python version of a Steen Hanson MCsimul program (written in FORTRAN)
+that was download from http://www.matfys.kvl.dk/~steen/MCsimul.zip May 2012.
+It was changed to read input in the PDB file format.
+It was extended to process multiple densities according to Whitten and Trewhella 2008.
+The Guinier processing in this python program has not yet been tested to ensure that it is still correct after the extensions made to the python program
 
 #### calculate_scattering_from_pdb/calc_scat_from_previous_calc.py (python2)
 
@@ -38,16 +38,12 @@ without having to rerun the timeconsuming calculating for component scattering.
 
 #### mulch2_calculate_componenents_from_neutron_contrast_scattering/MULCH2 (C++)
 
-```
 MULCH2 is a modified version of MULCH software (Whitten et al. 2008) that calculates X-ray and neutron scattering contrasts, radius of gyration from scattering data, and extracts form factors from scattering data. MULCH extracts 2 components. MULCH2 can extract for more than 2 components.
-```
 
 #### example_data_neutron_scattering_of_bamlet/BAMLET_neutron_scattering/SANS_and_SAXS_data
 
-```
 This data is X-ray and neutron scattering data of the BAMLET compound. MULCH2 and calculate_scattering_from_pdb/calc_scat_with_without_params.py were used on this data in Rath et al. 2017. 
 Further processing was carried out as detailed in Rath et al. 2017, and the resulting PDB models are in example_data_neutron_scattering_of_bamlet/BAMLET_neutron_scattering/BAMLET_models
-```
 
 ## Citations
 
